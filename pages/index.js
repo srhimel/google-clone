@@ -22,13 +22,13 @@ export default function Home() {
             alt=""
           />
           <div className="border w-full max-w-[80%] md:max-w-xl rounded-full flex mt-8 hover:shadow-lg focus-within:shadow-lg items-center px-5">
-            <SearchIcon className="h-5" />
+            <SearchIcon className="h-5 text-gray-400" />
             <input
               placeholder="Search Google or type a URL"
               type="text"
               className="flex-grow focus:outline-none py-3 px-2"
             />
-            <MicrophoneIcon className="h-5" />
+            <MicrophoneIcon className="h-5 text-blue-500" />
           </div>
           <div className="flex flex-col sm:flex-row w-1/2 space-y-2 mt-8 sm:space-y-0 sm:space-x-4 justify-center">
             <button className="btn">Google Search</button>
