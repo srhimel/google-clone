@@ -13,7 +13,7 @@ export default function Home() {
     e.preventDefault()
     const terms = searchInput.current.value
     if (!terms.trim()) return
-    router.push(`/search?terms=${terms.trim()}`)
+    router.push(`/search?terms=${terms.trim()}&searchType=`)
   }
   return (
     <div>

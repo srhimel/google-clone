@@ -4,6 +4,7 @@ import React, { useRef } from "react"
 
 import { SearchIcon, MicrophoneIcon, XIcon } from "@heroicons/react/solid"
 import User from "./User"
+import SearchHeaderOptions from "./SearchHeaderOptions"
 
 const SearchHeader = () => {
   const router = useRouter()
@@ -13,7 +14,7 @@ const SearchHeader = () => {
     e.preventDefault()
     const terms = searchInput.current.value
     if (!terms.trim()) return
-    router.push(`/search?terms=${terms.trim()}`)
+    router.push(`/search?terms=${terms.trim()}&searchType=`)
   }
   return (
     <header className="sticky top-0 bg-white">
@@ -47,6 +48,7 @@ const SearchHeader = () => {
         </form>
         <User className="ml-auto" />
       </div>
+      <SearchHeaderOptions />
     </header>
   )
 }
