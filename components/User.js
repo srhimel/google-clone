@@ -1,17 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 import { useSession, signIn, signOut } from "next-auth/react"
+import Image from "next/image"
 export default function User({ className }) {
   const { data: session } = useSession()
   if (session)
     return (
-      <>
-        <img
+      <span
+        className={`w-10 h-10 cursor-pointer ring-2 ring-red-200 rounded-full border-1 border-white ${className}`}
+      >
+        <Image
           src={session.user.image}
           alt=""
-          className={`h-10 w-10 cursor-pointer ring-2 ring-red-200 rounded-full border-1 border-white ${className}`}
           onClick={signOut}
+          height={40}
+          width={40}
         />
-      </>
+      </span>
     )
   return (
     <button
