@@ -2,11 +2,13 @@ import React from "react"
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid"
 import Link from "next/link"
 import { useRouter } from "next/router"
-const Pagination = () => {
+const Pagination = ({ className }) => {
   const router = useRouter()
   const startIndex = Number(router.query.start) || 1
   return (
-    <div className="flex justify-between max-w-xs pb-5 text-blue-700 select-none">
+    <div
+      className={`flex justify-between max-w-xs pb-5 text-blue-700 select-none ${className}`}
+    >
       {startIndex > 1 && (
         <Link
           href={`/search?terms=${router.query.terms}&searchType=${
