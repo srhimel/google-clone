@@ -23,7 +23,8 @@ const Search = ({ data }) => {
 }
 
 export async function getServerSideProps(context) {
-  const mockData = true
+  const mockData = false
+  const startIndex = context.query.start || 1
   const data = mockData
     ? Response
     : await fetch(
@@ -31,7 +32,7 @@ export async function getServerSideProps(context) {
           process.env.GOOGLE_API_KEY
         }&cx=${process.env.GOOGLE_CSE_ID}&q=${context.query.terms}${
           context.query.searchType && "&searchType=image"
-        }`
+        }&start=${startIndex}`
       ).then((res) => res.json())
   return {
     props: {
