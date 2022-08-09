@@ -6,7 +6,7 @@ import { useRouter } from "next/router"
 const SearchHeaderOptions = () => {
   const router = useRouter()
   return (
-    <div className="flex space-x-8 select-none w-full justify-center text-sm text-gray-500 md:pl-52 md:justify-start border-b">
+    <div className="flex space-x-8 select-none w-full justify-center text-sm text-gray-500 md:pl-20 lg:pl-52 md:justify-start border-b">
       <SearchHeaderOption
         title="All"
         Icon={SearchIcon}

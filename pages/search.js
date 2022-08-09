@@ -2,6 +2,7 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import React from "react"
 import SearchHeader from "../components/SearchHeader"
+import SearchResults from "../components/SearchResults"
 import Response from "../Response"
 
 const Search = ({ data }) => {
@@ -16,6 +17,7 @@ const Search = ({ data }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SearchHeader />
+      <SearchResults results={data} />
     </div>
   )
 }
