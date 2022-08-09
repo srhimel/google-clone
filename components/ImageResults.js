@@ -9,7 +9,11 @@ const ImageResults = ({ results }) => {
         {results.items.map((result) => (
           <div key={result.link} className="">
             <div className="group ">
-              <a href={result.image.contextLink}>
+              <a
+                href={result.image.contextLink}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img
                   className="w-full h-60 object-contain p-2 bg-white hover:shadow-lg"
                   src={result.link}
