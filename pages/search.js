@@ -7,7 +7,6 @@ import SearchResults from "../components/SearchResults"
 import Response from "../Response"
 
 const Search = ({ data }) => {
-  console.log(data)
   const router = useRouter()
   const { terms } = router.query
   return (
